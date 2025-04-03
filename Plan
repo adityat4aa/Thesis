@@ -1,0 +1,90 @@
+This is your best best friend, this plan :- 
+
+Aditya plan 
+
+
+28/3/2025 
+
+* Draft of literature review on depth completion and choose 1 dataset which is common for these tasks (kitti or others) 
+* Running anonymizer and test it on several cases (like blurry, car is farway etc)
+* Make sure foundational stereo works well, debug the reason (most probably bad intrinics (focal length not proper with the resolution) and baseline, others. 
+
+
+4/4/2025
+
+* Prepare a pipeline that basically takes the original images and anonymize it and return it back. 
+* Writing in the literature review (by your own style for the thesis) + documenting and understanding how they evaluate these tasks, and get the best model (cvpr 2025 paper i gave to you) and run it if public code exists, otherwise get one of the baselines in this paper. 
+* If possible look at YOLO in the anonymizer, if you can get bounding boxes for speed bumps automatic, or if it is possible for future labelling for evaluating on these cases only. 
+
+11/4/2025 
+
+* Test automatic anonymizer on the first batch of our data (provided by gasser), and if there exist yolo for making bounding boxes on the bad roads or something so that it can be combined pipeline. 
+* Discuss the outputs of rerunning one depth completion model, how they evaluate the model and how should we do the same for our data. 
+* Understanding the components of depth completition as good as possible. 
+
+18/4/2025
+
+* Replace the monocular depth estimation by foundational stereo (for kitti) test if the results are better? (It should be) 
+* Test if some additional cost volume (like in DepthSplat) can even make the results better or accumulation in the next and previous frame (so you have 4 frames stereo at step time 1 and stereo and time step 2 and so) 
+* Analysis of all of that to agree on the direction and the best approach to follow for the perfect GT 
+
+25/4/2025 
+
+* A lot of jobs should be running from the previous week, this week should be morr about automating all of our data pre processing. We should have a pipeline for anonymization and labelinng the speed bump specifically (this will help you at the end during evaluation) 
+* Given one batch of our data, we should have the full expected output of anonymizing and boxes, etc. 
+
+2/5/2024 
+
+* Fine tuning and expermients on both pipeline :- (1) depth completion (2) pipeline for anomymization and boxes. 
+* Buffer for any delay in the previous milestones ( but at end lf this date ) we expect ;- (1) one depth completion model (which is just variations of a sota) (2) full pipeline automaated for our data for anonymization and labelling. 
+
+9/5/2024 
+
+* In this week, assumingly our data should be all recorded, and may not be all pre-processed before giving it for you. But extra things should be added for our pipeline of data preprocessing :- statsitics of each sequence, like snowy? How many speed bumps? How many hole images? How many images does this sequence have? How minutes of driving? Average speed, median speed, etc. 
+
+16/5/2025 
+
+* Testing our depth compleition on one batch for our data. 
+* Testing all of our pipeline, (1) statistics (2) anonymization (3) auto-labelling
+* Analyzing the results of these pipelines ( the code should be clean, such that at the end of publishing, you should publish it under your own github, will give you great visbility) except the depth compleition which if we improved it we can publish it as separate paper. 
+
+23/5/2025
+* Writing methodlogy part of the thesis 
+* Buffer for delays in previous milestones
+
+30/5/2025
+* This point should be refining the thesis and methodology part
+* Analyzing if any of the pipelines need improvement. 
+
+6/6/2025
+* Processing the pipeline for the whole data and fact checking all the outputs (visually, this is time consuming and hopefully not much to be edited)
+* There should be a tool to manually adjust any problem, like blurring manually some faces or licenee, labelling manually the image, this should be automated by a tool to visualixe and annontete data or edit it as an example by streamlit or so. (I will assist in that task too)
+
+20/6/2025 
+
+* These extra tools and also which pipeline   We choose and everything should be settled down at this point. 
+* Running ablation studies on our current pipeline, and prove that this is efficient. 
+* Evaluate a baseline on our data too. 
+* Apart from usual metrics, we can also use our dense point clouds as GT example. 
+
+
+27/6/2025 
+
+* Carefully examining the results and fixing any problems in the pipeline, and at this point the full methodology should be written too, some buffer here for writing. 
+* Cleaning the pipeline and the tools for manual fixations with a readme and so. 
+
+4/7/2025
+
+* Proper documentation of your depth completion and its results vs baselines on kitti and our datasets. 
+* Final check on all of the dataset and if time allows, to enrich the labeling of the dataset too. 
+
+11/7/2025 
+
+
+* Running public models for self supervised depth estimation (monodepth2 and litemono) i have automatic scripts for that, so it should be easy for loading the images. 
+* Based on the statstics we should properly define some test set file names (like eigen in kitti) 
+
+18/7/2025 to end
+
+* Finalizing the thesis and refining it together, buffer for any problems, and maybe any change in directions, sickness, etc.
+
