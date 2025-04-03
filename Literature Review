@@ -1,5 +1,7 @@
 Literature Review
 
+1. Real-time depth completion based on LiDAR-stereo for autonomous driving.
+
 Wei et al. (2023) proposed RLS-Net, a real-time depth completion method that combines sparse LiDAR data with stereo image pairs to generate dense depth maps for autonomous driving. Instead of using traditional 3D convolutions, which are computationally expensive, the authors introduced a multi-stage injection strategy where LiDAR data guides the depth estimation process at multiple points in the network. A kernel-connected refinement module was also included to sharpen depth details, particularly around object edges.
 
 Evaluated on the KITTI dataset, RLS-Net showed strong results, achieving a good balance between accuracy and speed. It matched or outperformed other real-time models, with lower average error and better edge accuracy, while running at nearly 15 frames per second. Compared to LiDAR-only methods like S2D, it showed improvements in both mean absolute and root mean square errors with minimal increase in runtime. Although some slower models achieved slightly better accuracy, RLS-Net’s advantage was its real-time capability without a major compromise in performance.
