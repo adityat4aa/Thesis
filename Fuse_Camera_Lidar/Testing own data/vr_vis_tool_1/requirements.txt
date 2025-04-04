@@ -1,0 +1,10 @@
+attrs==25.3.0
+laspy==2.5.4
+lazrs==0.6.2
+numpy==2.2.4
+opencv-python==4.11.0.86
+pillow==11.1.0
+pyarrow==19.0.1
+rerun-sdk==0.22.1
+scipy==1.15.2
+typing_extensions==4.12.2
