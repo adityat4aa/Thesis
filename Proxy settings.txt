@@ -1,0 +1,2 @@
+export http_proxy='http://G7PMRT8:@EakPE5Yem%B@194.114.63.23:8080'
+export https_proxy='http://G7PMRT8:@EakPE5Yem%25B@194.114.63.23:8080'

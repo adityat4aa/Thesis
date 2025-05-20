@@ -154,5 +154,69 @@
 17.04
 - 12 Years of best birthday ever.
 - Annotated 140 images comprising of potholes and drainage holes.
+- Tried training a TF model on that data but faced issues with dependencies.
 
+22.04
+- Got access to the workstation, have raised a ticket for SSH
+- Ran the Anomyzer on all images from sw folder.
+- Got a script from Gasser which aggregates the point clouds from multiple frames.
+- Have to deploy FS on the frame and compare with the dense point clouds.
 
+23.04
+- Got access to SSH
+- Tried to run FS on my laptop but my CPU is too weak. Will run everything on the Workstation now.
+- Have created a script which integrates FoundationStereo with the Lidar point projection.
+
+24.94
+ - Tried to use FoundationStereo but got CUDA memory errors.
+
+25.04
+ - Installed CUDA toolkit without sudo.
+ - Installed flash_attn
+ - Managed to run foundation stereo by resizing images and other fixes by Gasser.
+ - Calculated Errors between GT and FS on one frame. The error is around 20 meters.
+
+28.04 - 30.04
+ - Tried improving FS by applying rectification by OpenCV tools.
+ - Found out that there is some issue with calibration.
+ - Was going to record more data but the sensor setup was damaged due to not considering the height of the parking lot.
+
+02.05
+ - Will plot the point clouds on a KITTI dataset image and then check if FS works well.
+ - KITTI works really work on FS. The FS point clouds and GT overlapped very well.
+ - Using scaling of 2 and rectification intrinsics, the medians were very close now.
+ - Trained a simple PyTorch model to predict road profiles on just 101 images.
+
+05.05
+ - Decided to use Yolov8 model for irregularities detection.
+ - Trained a model on the same dataset as before and obtained better results.
+ - Installed labelImg on workstation for labeling.
+ - Went to workstation and used the wlan adapter to fix the mounting of dataset.
+
+06.05
+ - Created a script which takes 50 random images from a sample for annotation.
+ - Will grab 50 images from each folder to create a big dataset for annotation.
+ - Labelled images from day 1 data using labelimg and trained a yolo model.
+
+07.05
+ - Trained a model on day 1 and day 2 data and saw improved results
+ - Had a meet with the professor regarding the progress and sent him the outputs of the anonymizer tool
+
+08.05
+ - Read a research paper "Dynamic Spatial Propagation Network for Depth Completion" given by gasser
+
+09.05
+ - Got more data from day_1 recordings and trained a model. mAp reached 0.7
+ - Integrated the rectification script given by Gasser.
+
+12.05 
+ - Used UniDepth to find out depths and point clouds.
+ 
+13.05
+ - Used DepthPro and UniDepth to find out depths and point clouds on own data
+ - Programmed scripts in these two models to use own instrincs as well as predicted intrinsics.
+
+19.05
+ - Created three crucial scripts to rectify images, run foundationstereo on the rectified pair, edited the script which creates ground truth and created an evaluation script for the point clouds.
+ - Tested the scripts on new intrinsics and the results are insanely better than before
+ - 
